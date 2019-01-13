@@ -28,7 +28,6 @@ class Test
     elsif user_input == 3
       @score += 1
     end
-
-    @question_number += 1 # счетчик
+    @question_number += 1
   end
 end

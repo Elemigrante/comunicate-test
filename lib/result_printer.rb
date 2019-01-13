@@ -5,9 +5,8 @@ class ResultPrinter
 
   def print_result(test)
     puts
-    puts
     puts "\n\nРезультат теста (всего баллов - #{test.score}):"
-    # Логика вывода результатов в зависимости от баллов
+
     case test.score
     when (32..30) then puts @results[0]
     when (25..29) then puts @results[1]
