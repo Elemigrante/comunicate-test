@@ -1,14 +1,6 @@
 class ResultPrinter
   def initialize(results_path)
-    # Вывод сообщения если файл не найден.
-    unless File.exist?(results_path)
-      abort "Файл с результатами #{results_path} не найден."
-    end
-    # Если файл найден, открываем его, читаем
-    # строки в массив-переменную экземляра @results
-    file = File.new(results_path)
-    @results = file.readlines
-    file.close
+    @results = File.readlines(results_path)
   end
 
   def print_result(test)

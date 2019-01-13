@@ -1,16 +1,8 @@
 class Test
   attr_reader :score
-  def initialize(questions_path)
-    # Вывод сообщения если файл не найден.
-    unless File.exist?(questions_path)
-      abort "Файл с вопросами #{questions_path} не найден."
-    end
-    # Если файл найден, открываем его, читаем
-    # строки в массив-переменную экземляра @results
-    file = File.new(questions_path)
-    @questions = file.readlines
-    file.close
 
+  def initialize(questions_path)
+    @questions = File.readlines(questions_path)
     @score = 0 # хранение баллов
     @question_number = 0 #
   end

@@ -6,9 +6,16 @@ puts "Ваш уровень общительности.\nТест поможет
 questions_path = "#{__dir__}/data/questions.txt"
 results_path = "#{__dir__}/data/results.txt"
 
-test = Test.new(questions_path)
+begin
+  test = Test.new(questions_path)
+rescue SystemCallError
+  puts "Файл с вопросами не найден! #{questions_path}"
+  exit
+end
+
 result_printer = ResultPrinter.new(results_path)
 
 test.take_question until test.finished?
+
 
 result_printer.print_result(test)
