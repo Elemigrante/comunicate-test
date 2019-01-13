@@ -1,8 +1,7 @@
 require_relative 'lib/test'
 require_relative 'lib/result_printer'
 
-puts "Ваш уровень общительности.\nТест поможет определить ваш уровень общительности.
-Версия 1.0."
+puts "Ваш уровень общительности.\nТест поможет определить ваш уровень общительности.Версия 1.0."
 
 questions_path = "#{__dir__}/data/questions.txt"
 results_path = "#{__dir__}/data/results.txt"
