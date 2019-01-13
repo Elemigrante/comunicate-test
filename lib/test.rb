@@ -1,4 +1,5 @@
 class Test
+  attr_reader :score
   def initialize(questions_path)
     # Вывод сообщения если файл не найден.
     unless File.exist?(questions_path)
@@ -37,9 +38,5 @@ class Test
     end
 
     @question_number += 1 # счетчик
-  end
-
-  def score
-    @score
   end
 end
