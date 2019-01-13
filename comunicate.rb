@@ -17,6 +17,6 @@ end
 
 result_printer = ResultPrinter.new(results_path)
 
-test.take_question until test.finished?
+test.ask_question until test.finished?
 
 result_printer.print_result(test)

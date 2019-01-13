@@ -11,7 +11,7 @@ class Test
     @question_number >= @questions.size
   end
 
-  def take_question
+  def ask_question
     puts @questions[@question_number]
 
     user_input = nil
