@@ -15,7 +15,12 @@ rescue SystemCallError
   exit
 end
 
-result_printer = ResultPrinter.new(results_path)
+begin
+  result_printer = ResultPrinter.new(results_path)
+rescue
+  puts "Файл с ответами не найден! #{results_path}"
+  exit
+end
 
 test.ask_question until test.finished?
 
