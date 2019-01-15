@@ -3,8 +3,8 @@ class Test
 
   def initialize(questions_path)
     @questions = File.readlines(questions_path)
-    @score = 0 # хранение баллов
-    @question_number = 0 #
+    @score = 0
+    @question_number = 0
   end
 
   def finished?
