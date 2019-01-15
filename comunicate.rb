@@ -8,19 +8,9 @@ puts
 questions_path = "#{__dir__}/data/questions.txt"
 results_path = "#{__dir__}/data/results.txt"
 
-begin
-  test = Test.new(questions_path)
-rescue SystemCallError
-  puts "Файл с вопросами не найден! #{questions_path}"
-  exit
-end
+test = Test.new(questions_path)
 
-begin
-  result_printer = ResultPrinter.new(results_path)
-rescue
-  puts "Файл с ответами не найден! #{results_path}"
-  exit
-end
+result_printer = ResultPrinter.new(results_path)
 
 test.ask_question until test.finished?
 

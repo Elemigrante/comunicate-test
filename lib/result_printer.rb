@@ -4,18 +4,19 @@ class ResultPrinter
   end
 
   def print_result(test)
-    puts
     puts "\n\nРезультат теста (всего баллов - #{test.score}):"
 
-    case test.score
-    when (32..30) then puts @results[0]
-    when (25..29) then puts @results[1]
-    when (19..24) then puts @results[2]
-    when (14..18) then puts @results[3]
-    when (9..13) then puts @results[4]
-    when (4..9) then puts @results[5]
-    else
-      puts @results[6]
-    end
+    result =
+      case test.score
+      when (32 .. 30) then 0
+      when (25 .. 29) then 1
+      when (19 .. 24) then 2
+      when (14 .. 18) then 3
+      when (9 .. 13) then 4
+      when (4 .. 9) then 5
+      else
+        6
+      end
+     puts @results[result]
   end
 end
